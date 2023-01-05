@@ -56,7 +56,7 @@ cor(bmi,avg_glucose_level)
 tab <- matrix(c(vanilla.estimator,ratio.estimator,vanilla.se,ratio.se,
 vanilla.lower.limit.CI,ratio.lower.limit.CI,vanilla.upper.limit.CI, ratio.upper.limit.CI)
 ,nrow=2,ncol=4)
-colnames(tab) <- c('estimates','standard erros','lower confidence intervals','upper confidence intervals')
+colnames(tab) <- c('estimates','standard errors','lower confidence intervals','upper confidence intervals')
 rownames(tab) <- c('Vanilla','Ratio')
 tab <- as.table(tab)
 formattable(tab) %>% kable(caption = "SRS_Continuous_Data")
@@ -82,7 +82,7 @@ prop.lower.limit.CI <- prop.estimator - 1.96*prop.se
 prop.upper.limit.CI <- prop.estimator + 1.96*prop.se
 tab3 <- matrix(c(prop.estimator,prop.se,prop.lower.limit.CI,prop.upper.limit.CI)
               ,nrow=1,ncol=4)
-colnames(tab3) <- c('estimates','standard erros','lower confidence intervals','upper confidence intervals')
+colnames(tab3) <- c('estimates','standard errors','lower confidence intervals','upper confidence intervals')
 rownames(tab3) <- c('SRS (binary)')
 tab3 <- as.table(tab3)
 formattable(tab3) %>% kable(caption = "SRS_Binary_Data")
@@ -115,7 +115,7 @@ STR.upper.limit.CI <- ybar.str.prop + 1.96*se.str.prop
 # Table for STR Continuous Data
 tab2 <- matrix(c(ybar.str.prop,se.str.prop,STR.lower.limit.CI,STR.upper.limit.CI)
               ,nrow=1,ncol=4)
-colnames(tab2) <- c('estimates','standard erros','lower confidence intervals','upper confidence intervals')
+colnames(tab2) <- c('estimates','standard errors','lower confidence intervals','upper confidence intervals')
 rownames(tab2) <- c('STR (continuous)')
 tab2 <- as.table(tab2)
 formattable(tab2) %>% kable(caption = "STR_Continuous_Data")
@@ -133,7 +133,7 @@ STR.new.upper.limit.CI <- ybar.prop + 1.96*se.new.prop
 # Table for STR Binary Data
 tab4 <- matrix(c(ybar.prop,se.new.prop,STR.new.lower.limit.CI,STR.new.upper.limit.CI)
                ,nrow=1,ncol=4)
-colnames(tab4) <- c('estimates','standard erros','lower confidence intervals','upper confidence intervals')
+colnames(tab4) <- c('estimates','standard errors','lower confidence intervals','upper confidence intervals')
 rownames(tab4) <- c('STR (binary)')
 tab4 <- as.table(tab4)
 formattable(tab4) %>% kable(caption = "STR_Binary_Data")
