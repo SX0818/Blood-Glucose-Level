@@ -4,7 +4,7 @@ library(formattable)
 library(knitr)
 
 # data <- healthcare.dataset.stroke.data
-data <- read.csv("/Users/yuqianxie/Desktop/healthcare-dataset-stroke-data.csv",header=T)
+data <- read.csv("healthcare-dataset-stroke-data.csv",header=T)
 # data cleansing (remove row with NA value)
 data[data == "N/A"] <- NA
 data[data == "Unknown"] <- NA
@@ -137,10 +137,3 @@ colnames(tab4) <- c('estimates','standard errors','lower confidence intervals','
 rownames(tab4) <- c('STR (binary)')
 tab4 <- as.table(tab4)
 formattable(tab4) %>% kable(caption = "STR_Binary_Data")
-
-
-
-
-
-
-
